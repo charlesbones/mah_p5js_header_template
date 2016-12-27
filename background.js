@@ -1,13 +1,18 @@
+//VARIABLES
 var x=0;
 var y=0;
 var a=new arrowX();
 var divHeader;
 var bodySize;
+//ADD YOUR NAME AN ANY EXTERNAL LINK TO YOUR PORTFOLIO
+//Note: please use any url shortener for the link to the protfolio
 var authorName="Mario Rodriguez";
 var authorSite="bones.sikuani.net";
 function setup() {
+  //Leave this functions here
   canvasSetup();
   authorInfo();
+  //-------------------------
   background(200);
 }
 
@@ -50,12 +55,20 @@ function authorInfo(){
   authorContact.style("font-size","70%");
   authorContact.parent("p5Gallery");
 }
+/*-----------
+Canvas setup function
+PLEASE DON'T MODIFY THIS FUNCTION
+-----------*/
 function canvasSetup(){
   divHeader=select('#masthead');
   bodySize=select('body');
   var canvas= createCanvas(bodySize.width , divHeader.height);
   canvas.parent("p5Gallery");
 }
+/*-----------
+Window resize function
+PLEASE DON'T MODIFY THIS FUNCTION
+-----------*/
 function windowResized(){
   divHeader=select('#masthead');
   bodySize=select('body');
