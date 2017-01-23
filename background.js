@@ -2,12 +2,13 @@
 var x=0;
 var y=0;
 var a=new arrowX();
+// Please don't change this variables
 var divHeader;
 var bodySize;
 //ADD YOUR NAME AN ANY EXTERNAL LINK TO YOUR PORTFOLIO
 //Note: please use any url shortener for the link to the protfolio
 var authorName="Mario Rodriguez";
-var authorSite="bones.sikuani.net";
+var authorSite="http://bones.sikuani.net";
 function setup() {
   //Leave this functions here
   canvasSetup();
@@ -23,7 +24,9 @@ function draw() {
     a.render();
   }
 }
-
+/*-----------
+Example of a class
+-----------*/
 function arrowX() {
   this.x=0;
   this.y=100;
@@ -46,12 +49,12 @@ function authorInfo(){
   var authorContact= createA(authorSite,authorSite);
   author.style("position","absolute");
   author.style("right","1%");
-  author.style("bottom",divHeader.height/100+'%');
+  author.style("bottom",'0%');
   author.style("font-size","80%");
   author.parent("p5Gallery");
   authorContact.style("position","absolute");
   authorContact.style("right","1%");
-  authorContact.style("bottom",divHeader.height/100+'%');
+  authorContact.style("bottom",'0%');
   authorContact.style("font-size","70%");
   authorContact.parent("p5Gallery");
 }
@@ -60,7 +63,7 @@ Canvas setup function
 PLEASE DON'T MODIFY THIS FUNCTION
 -----------*/
 function canvasSetup(){
-  divHeader=select('#masthead');
+  divHeader=select('#p5Gallery');
   bodySize=select('body');
   var canvas= createCanvas(bodySize.width , divHeader.height);
   canvas.parent("p5Gallery");
@@ -70,7 +73,7 @@ Window resize function
 PLEASE DON'T MODIFY THIS FUNCTION
 -----------*/
 function windowResized(){
-  divHeader=select('#masthead');
+  divHeader=select('#p5Gallery');
   bodySize=select('body');
   resizeCanvas(bodySize.width, divHeader.height);
 }
